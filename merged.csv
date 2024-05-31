@@ -1,0 +1,20 @@
+import os
+import pandas as pd
+
+# Get the directory of the current script
+script_dir = os.path.dirname(__file__)
+
+# File paths for customers and sales CSV files
+customers_file = os.path.join(script_dir, 'customers.csv')
+sales_file = os.path.join(script_dir, 'sales.csv')
+
+# Load the CSV files into DataFrames
+customers_df = pd.read_csv(customers_file)
+sales_df = pd.read_csv(sales_file)
+
+# Display the first few rows of each DataFrame
+print("Customers DataFrame:")
+print(customers_df.head())
+
+print("\nSales DataFrame:")
+print(sales_df.head())
